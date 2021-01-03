@@ -7,15 +7,15 @@ double heron(std::vector<double> sideLengths);
 
 int main() {
 
-    std::cout << "Hello, World!\n";
+    std::cout << "[--Heron's Formula--]\n";
 
     std::vector<double> sideLengths = getSideLengths();
 
     double area = heron(sideLengths);
 
-    std::cout << "Area of a triangle with side lengths " << sideLengths[0] << 
-                    ", " << sideLengths[1] << ", and " << sideLengths[2] 
-                    << ": " << area;
+    std::cout << "The Area of a triangle with side lengths " 
+                << sideLengths[0] << ", " << sideLengths[1] << ", and " 
+                << sideLengths[2] << ": " << area;
     
 }
 
