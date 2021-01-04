@@ -1,3 +1,6 @@
+#ifndef COMPANY
+#define COMPANY
+
 #include <iostream>
 
 // Structs are good for data-only structures 
@@ -14,3 +17,5 @@ class Employee {
         double wage;
         void printEmployeeInfo();
 };
+
+#endif
