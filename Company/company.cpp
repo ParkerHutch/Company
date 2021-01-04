@@ -1,26 +1,18 @@
-#include <iostream>
 #include "company.h"
+#include "employee.h"
 
-void Employee::printEmployeeInfo() {
+double Company::getPayroll() {
 
-    std::cout << "Employee #" << card.idNum << "(" 
-        << card.name << ") is " << age 
-        << " years old and has an hourly wage of " 
-        << wage << ".\n";
+    double companyHourlyWage = 0;
 
-}
+    for (Employee employee : employees) {
 
-int main() {
+        companyHourlyWage += employee.wage;
 
-    Employee joe;
-    joe.card = CompanyCard{"Joe", 1};
-    joe.age = 34;
-    joe.wage = 500;
+    }
 
-    // Uniform Initialization
-    Employee sally = Employee{CompanyCard{"Sally", 2}, 43, 600};
-
-    joe.printEmployeeInfo();
-    sally.printEmployeeInfo();
+    double yearlyPayroll = companyHourlyWage * 40 * 52;
+    
+    return yearlyPayroll;
 
 }

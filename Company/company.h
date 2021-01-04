@@ -1,21 +1,17 @@
 #ifndef COMPANY
 #define COMPANY
 
-#include <iostream>
+#include <vector>
+#include "employee.h"
 
-// Structs are good for data-only structures 
-// They're allowed to have functions, but this is not recommended
-struct CompanyCard {
-    std::string name;
-    short idNum;
-};
 
-class Employee {
+class Company {
+
     public:
-        CompanyCard card;
-        int age;
-        double wage;
-        void printEmployeeInfo();
+        std::vector<Employee> employees;
+        double getPayroll();
+        void generateEmployees(int numEmployees);
+
 };
 
 #endif
