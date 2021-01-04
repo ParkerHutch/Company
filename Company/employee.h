@@ -15,6 +15,10 @@ class Employee {
         CompanyCard card;
         int age;
         double wage;
+
+        Employee();
+        Employee(CompanyCard card, int age, double wage);
+        Employee(int maxWage);
         void printEmployeeInfo();
 };
 

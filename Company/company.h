@@ -1,4 +1,5 @@
-#ifndef COMPANY
+// Header guard
+#ifndef COMPANY 
 #define COMPANY
 
 #include <vector>
@@ -9,8 +10,10 @@ class Company {
 
     public:
         std::vector<Employee> employees;
+        Company(int numEmployees, int maxWage);
         double getPayroll();
-        void generateEmployees(int numEmployees);
+        void generateEmployees(int numEmployees, int maxWage);
+        void printSummary();
 
 };
 
