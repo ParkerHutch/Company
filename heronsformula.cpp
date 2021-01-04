@@ -13,9 +13,9 @@ int main() {
 
     double area = heron(sideLengths);
 
-    std::cout << "The Area of a triangle with side lengths " 
+    std::cout << "The area of a triangle with side lengths " 
                 << sideLengths[0] << ", " << sideLengths[1] << ", and " 
-                << sideLengths[2] << ": " << area;
+                << sideLengths[2] << " is " << area;
     
 }
 
