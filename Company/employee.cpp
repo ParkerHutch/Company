@@ -45,7 +45,10 @@ namespace business {
         std::string lastName = lastNames[lastNameIndex];
 
         card.name = firstName + " " + lastName;
-        card.idNum = rand() % 5000;
+
+        static int s_employeeNum = 1; // retains value until end of program
+        card.idNum = s_employeeNum++;
+        //card.idNum = rand() % 5000; Random id number
 
         age = rand() % 75;
 
