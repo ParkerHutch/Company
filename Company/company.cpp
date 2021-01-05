@@ -2,49 +2,53 @@
 #include "company.h"
 #include "employee.h"
 
-business::Company::Company(int numEmployees, int maxWage) {
+namespace business {
 
-    generateEmployees(numEmployees, maxWage);
+    Company::Company(int numEmployees, int maxWage) {
 
-}
-
-double business::Company::getPayroll() {
-
-    double companyHourlyWage = 0;
-
-    for (Employee employee : employees) {
-
-        companyHourlyWage += employee.wage;
+        generateEmployees(numEmployees, maxWage);
 
     }
 
-    double yearlyPayroll = companyHourlyWage * 40 * 52;
+    double Company::getPayroll() {
 
-    return yearlyPayroll;
+        double companyHourlyWage = 0;
 
-}
+        for (Employee employee : employees) {
 
-void business::Company::generateEmployees(int numEmployees, int maxWage) {
+            companyHourlyWage += employee.wage;
 
-    for (int i = 0; i < numEmployees; i++) {
+        }
 
-        Employee newEmployee = Employee(maxWage);
-        employees.push_back(newEmployee);
+        double yearlyPayroll = companyHourlyWage * 40 * 52;
 
-    }
-
-}
-
-void business::Company::printSummary() {
-
-    for (Employee employee : employees) {
-
-        employee.printEmployeeInfo();
+        return yearlyPayroll;
 
     }
 
-    std::cout << "The yearly payroll total is $" << getPayroll();
+    void Company::generateEmployees(int numEmployees, int maxWage) {
 
+        for (int i = 0; i < numEmployees; i++) {
+
+            Employee newEmployee = Employee(maxWage);
+            employees.push_back(newEmployee);
+
+        }
+
+    }
+
+    void Company::printSummary() {
+
+        for (Employee employee : employees) {
+
+            employee.printEmployeeInfo();
+
+        }
+
+        std::cout << "The yearly payroll total is $" << getPayroll();
+
+    }
+    
 }
 
 // Showcase different ways of creating employees
