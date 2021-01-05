@@ -5,11 +5,11 @@
 #include "employee.h"
 
 namespace business {
-    std::vector<std::string> firstNames = {
+    const std::vector<std::string> firstNames = {
         "Joe", "John", "Carl", "Bart", "George", "Thomas", "Matthew", 
         "Sarah", "Sally", "Emily", "Carly", "Karen", "Michelle"
     };
-    std::vector<std::string> lastNames = {
+    const std::vector<std::string> lastNames = {
         "Johnson", "Baker", "Thompson", "Smith", "Scott", "Elliot"
     };
 
