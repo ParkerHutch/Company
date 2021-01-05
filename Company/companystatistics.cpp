@@ -4,7 +4,7 @@
 
 int main() {
 
-    Company company = Company(10, 500);
+    business::Company company = business::Company(10, 500);
     company.printSummary();
     //std::cout << company.getPayroll();
 

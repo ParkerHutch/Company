@@ -2,14 +2,13 @@
 #include "company.h"
 #include "employee.h"
 
-Company::Company(int numEmployees, int maxWage) {
+business::Company::Company(int numEmployees, int maxWage) {
 
-    //srand(time(0));
     generateEmployees(numEmployees, maxWage);
 
 }
 
-double Company::getPayroll() {
+double business::Company::getPayroll() {
 
     double companyHourlyWage = 0;
 
@@ -25,7 +24,7 @@ double Company::getPayroll() {
 
 }
 
-void Company::generateEmployees(int numEmployees, int maxWage) {
+void business::Company::generateEmployees(int numEmployees, int maxWage) {
 
     for (int i = 0; i < numEmployees; i++) {
 
@@ -36,7 +35,7 @@ void Company::generateEmployees(int numEmployees, int maxWage) {
 
 }
 
-void Company::printSummary() {
+void business::Company::printSummary() {
 
     for (Employee employee : employees) {
 
