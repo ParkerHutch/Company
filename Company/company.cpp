@@ -51,7 +51,8 @@ namespace business {
 
         }
 
-        std::cout << "The yearly payroll total is $" << getPayroll();
+        std::cout.precision(2);
+        std::cout << std::fixed << "The yearly payroll total is $" << getPayroll();
 
     }
 
