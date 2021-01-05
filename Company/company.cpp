@@ -24,7 +24,7 @@ namespace business {
 
         }
 
-        double yearlyPayroll = companyHourlyWage * 40 * 52;
+        auto yearlyPayroll = companyHourlyWage * 40 * 52;
 
         return yearlyPayroll;
 
@@ -61,7 +61,7 @@ namespace business {
 // Showcase different ways of creating employees
 // void createEmployees() {
 
-//     Employee joe;
+//     Employee joe; // Calls default constructor
 //     joe.card = CompanyCard{"Joe", 1};
 //     joe.age = 34;
 //     joe.wage = 500;
