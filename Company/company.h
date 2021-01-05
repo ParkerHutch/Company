@@ -2,6 +2,7 @@
 #ifndef COMPANY 
 #define COMPANY
 
+#include <string>
 #include <vector>
 #include "employee.h"
 
@@ -10,7 +11,9 @@ namespace business {
 
         public:
             std::vector<Employee> employees;
-            Company(int numEmployees, int maxWage);
+            std::string name;
+            
+            Company(std::string name, int numEmployees, int maxWage);
             double getPayroll();
             void generateEmployees(int numEmployees, int maxWage);
             void printSummary();

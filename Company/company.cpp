@@ -1,13 +1,14 @@
 #include <iostream>
-#include "company.h"
-#include "employee.h"
 #include <ctime>
 #include <cstdlib>
+#include <string>
+#include "company.h"
+#include "employee.h"
 
 namespace business {
 
-    Company::Company(int numEmployees, int maxWage) {
-
+    Company::Company(std::string name, int numEmployees, int maxWage) {
+        this->name = name;
         srand(time(0));
         generateEmployees(numEmployees, maxWage);
 
@@ -42,6 +43,8 @@ namespace business {
 
     void Company::printSummary() {
 
+        std::cout << "Company \"" << name << "\" with " 
+                    << employees.size() << " employees:\n";
         for (Employee employee : employees) {
 
             employee.printEmployeeInfo();
