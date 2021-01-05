@@ -1,11 +1,14 @@
 #include <iostream>
 #include "company.h"
 #include "employee.h"
+#include <ctime>
+#include <cstdlib>
 
 namespace business {
 
     Company::Company(int numEmployees, int maxWage) {
 
+        srand(time(0));
         generateEmployees(numEmployees, maxWage);
 
     }
@@ -48,7 +51,7 @@ namespace business {
         std::cout << "The yearly payroll total is $" << getPayroll();
 
     }
-    
+
 }
 
 // Showcase different ways of creating employees
